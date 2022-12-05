@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+				a.one:link {
+					background-color: yellow;
+					text-decoration: none;
+					border: solid black 1px;
+					padding: 1px;
+					display: inline-block;
+				}
+				a.one:visited { 
+					background-color: cyan;
+				}
+				a.one:hover {
+					background-color: purple;
+				}
+				a.one:active {
+					background-color:hotpink;
+				}
+				a.two:link {
+					background-color: darkblue;
+					text-decoration: none;
+					border: solid black 1px;
+					padding: 1px;
+					display: inline-block;
+				}
+				a.two:visited { 
+					background-color: black;
+				}
+				a.two:hover {
+					background-color: orange;
+				}
+				a.two:active {
+					background-color:hotpink;
+				}
+				div {
+				border: 1px solid black;
+				height: 100px;
+				width: 100px;
+				padding: 10px;
+				}
+				
+				div:target#first{
+				background-color: skyblue;
+				color: white;
+			
+				}
+				div:target#second{
+				border-style:dotted;
+				border-color:green;
+				border-width:10px;
+				background-color: darkgreen;
+				color: white;
+		</style>
+			
+	</head>
+	<body>
+		<a class="one" href="#first" target="_blank">
+								First Link
+								
+		</a>
+		<a class="two" href="#second" target="_blank">
+								Second Link
+								
+		</a>
+		<br></br>
+		<div id="first">
+		Div 1 here
+		</div>
+		<br></br>
+		<div id="second">
+		Div 2 here
+		</div>
+	</body>
+	</html>
+	
+						
+					
+						
