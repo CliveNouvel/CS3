@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	<h1> help </h1>
+		<p id="demo" style="color:red"></p>
+		<button onclick="f1() "> Compute </button>
+		<script>
+		
+			function f1 () {
+				var x = prompt("Heads or tails?: ", "");
+				var compatible = (Math.random() * 2).toFixed(2);
+				
+				if( compatible < 1) {
+			
+				document.getElementById("demo").innerHTML = "you got heads";
+				
+				}
+				
+				else { 
+				 document.getElementById("demo").innerHTML = "you got tails";
+		
+				}
+			}
+		</script>
+	</body>
+</html>
