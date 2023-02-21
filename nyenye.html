@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			* {
+				text-align: center;
+			}
+		</style>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<h1> Who's your bias? </h1>
+		<button onclick="test()">Click This</button>
+		
+		<div style="padding:10px">
+			<p id="demo1" style="color:red"></p>
+			<img id="demo" src="" width="100%">
+		</div>
+		<script>
+			var x = ["jhope", "jimin", "jin", "jungkook", "rm", "suga", "v"];
+			function test() {
+				var c = Math.floor(Math.random() * 7);
+				document.getElementById("demo").src = "bts/" + x[c] + ".jpg";
+				document.getElementById("demo1").innerHTML = x[c].toUpperCase() + " will recognize you soon.";
+			}
+		</script>
+	</body>
+</html>
