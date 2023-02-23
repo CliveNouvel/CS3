@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2nd Page</title>
+</head>
+<body>
+	<h1>SEVENTEEN main biases</h1>
+	<p>Click the buttons below to change the image:</p>
+	<button onclick="secondImage()">Change Image</button>
+	<button onclick="firstImage()">Reset Image</button>
+	<br>
+	<img id="svtImage" src="wonwoo.jpg" alt="Original Image">
+	
+	<script>
+		function secondImage() {
+			document.getElementById("svtImage").src = "jeonghan.jpg";
+		}
+
+		function firstImage() {
+			document.getElementById("svtImage").src = "wonwoo.jpg";
+		}
+	</script>
+</body>
+</html>
