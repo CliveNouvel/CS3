@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Breakdown</title>
+  </head>
+  <body>
+    <h1>Random Number Breakdown</h1>
+    <p id="randomN"></p>
+    <p id="numberB"></p>
+
+    <script>
+      const random = Math.floor(Math.random() * 1001);
+
+      const randomElement = document.getElementById("randomN");
+      randomElement.innerHTML = "Randomly generated number: " + random;
+
+      const ones = random % 10;
+      const tens = Math.floor(random / 10) % 10;
+      const hundreds = Math.floor(random / 100);
+
+      const breakdownElement = document.getElementById("numberB");
+      breakdownElement.innerHTML = "Breakdown: " + (hundreds * 100) + ", " + (tens * 10) + ", " + ones;
+    </script>
+  </body>
+</html>
