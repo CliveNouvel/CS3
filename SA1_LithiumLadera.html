@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Toss coin</title>
+		<meta name="author" content="Clive Nouvel M. Ladera">
+		 <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        	body {background: navy; 
+            	text-align: center;
+            	font-family: arial;
+                color: white;
+            }
+            button {padding: 10px; background:violet }
+            span {color: yellow}
+            #coin, h5 {color: yellow; }
+            #coin { background: gray; 
+            	width: 25px; 
+                height: 25px;
+                padding: 25px;          
+                border: 5px dashed darkgray;
+                border-radius: 50%;
+                margin: 0 auto;
+                
+            }
+            
+        </style>
+
+	</head>
+	<body onload="getGuess()">
+        <h1> Heads or Tail? </h1>
+        <h2 onclick="getGuess()"> Click here to change your Guess: <span id="guess"> </span></h2>
+        <h2 onclick="faceChange()" id="coin" > H </span></h2>   
+        <h5> Click on the coin above to randomly change its face and compare with your guess </h5> 
+        <script>
+            /* do not forget to include comments to this script */
+            var getGuess = function() {
+                uGuess = prompt("Type H for head and T for tail","H");
+                uGuess.toUpperCase; // converting to an uppercase letter
+                (uGuess != "H" && uGuess != "T") ?	alert("Wrong Input"):
+                    guess.innerHTML = uGuess;
+            }
+			
+
+			function faceChange() {
+			
+				var random = Math.floor(Math.random() * 2); //To get either '1' or '0'
+				
+				if(random == 0) {//to change the face of the coin if the value is equal to 0 to "H"
+			
+				document.getElementById("coin").innerHTML = "H"; 
+				random = "H";
+				if (random == uGuess) { // if the guess is "H" and random is equal to 0 
+						alert("You got it right!");
+					}
+					else { // if random is not equal to 0
+						alert("Wrong guess :( Try again");
+					}
+				
+
+				
+				}
+				
+				else { //if the value is 1 change the face to "T"
+				 document.getElementById("coin").innerHTML = "T";
+				 random = "T";
+				 
+				 if (random == uGuess) { // if the guess is "T" and random is equal to 1
+						alert("You got it right!");
+					}
+					else { // if random is not eual to 1
+						alert("Wrong guess :( Try again");
+					}
+		
+				}
+			
+				
+				
+				}
+				
+				
+				
+			
+				
+					
+
+			
+		
+	
+		
+
+        </script>
+	</body>
+</html>
