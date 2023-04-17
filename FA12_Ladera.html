@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+    <title>Multiplication Table  </title> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8"> 
+		<meta name="keywords" content="HTML, CSS, JavaScript"> 
+
+	</head>
+	
+	<style>
+		#Code {
+			text-align: center;
+		}
+		
+		span{
+			display: inline-block;
+			padding: 10px;
+			width: 55px;
+			border: 1px double black;
+		}
+		
+		p {
+			display: inline-block;
+		}
+		
+		#outputDiv {
+			position: absolute;
+			top: 150px;
+			right: 550px;
+			margin: 5px;
+			padding: 2px;
+			border: 1px solid black;
+			display: block;
+		}
+	</style>
+	
+	<body>
+		<div id="Code">
+			<!-- Input Boxes -->
+			<form>
+                            <label for="name"> Enter a whole number between 2 and 10</label> <br/>
+				<input type="number" id="xNum" placeholder="# for x-axis" min="2" max="10"> <p> by </p>
+				<input type="number" id="yNum" placeholder="# for y-axis" min="2" max="10">
+			</form>
+	
+		
+			<br/>
+			<button onclick="generateTable()"> Enter</button> 
+
+			<div id="outputDiv">
+				<br/> <br/>
+			</div>
+		</div>
+		
+		<script>
+			function generateTable(){
+				var x = parseInt(document.getElementById("xNum").value);
+				var y = parseInt(document.getElementById("yNum").value);
+				
+				if(x < 2 || x > 10 || y < 2 || y > 10){
+					alert("Input error. Enter a whole number between 2 and 10 ");
+					return;
+				} 
+				
+				var xCtr = 1;
+				var output = "";
+				
+				while(xCtr <= x){
+					var yCtr = 1;
+					while(yCtr <= y){
+						output += "<span>" + yCtr*xCtr + "</span>"; 
+						yCtr++;
+					}
+					output += "<br/>";
+					xCtr++;
+				}
+				document.getElementById("outputDiv").innerHTML = output;
+				document.getElementById("outputDiv").innerHTML = inline-block;
+			}
+
+				
+			
+		</script>
+	</body>
+</html>
