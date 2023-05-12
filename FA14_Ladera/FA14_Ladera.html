@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	<title>Clive's Submission Form</title>
+	<meta name="author" content="Clive Nouvel M. Ladera">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style>
+	body {
+				font-family: Verdana, sans-serif;
+				padding: 20px;
+				background-image: url("Steven Universe.jpg");
+				background-repeat: no-repeat;
+				background-size: cover;
+
+			}
+			
+			
+			header {
+				box-shadow: 5px 10px #00aeef;
+				background-color: white;
+				padding: 20px;
+				max-width: 800px;
+				margin: 0 auto;
+				margin-bottom: 30px;
+				border: 1px solid #292929;
+				opacity: 0.5;
+				border-radius: 20px;			}
+			
+			h1 {
+				font-size: 32px;
+				margin-bottom: 10px;
+				background-color: white;
+				opacity: 0.3;
+			}
+			
+			p {
+				font-size: 18px;
+				background-color: white;
+				margin-bottom: 0;
+			}
+
+			form {
+				box-shadow: 5px 10px #00aeef;
+				background-color: white;
+				padding: 20px;
+				max-width: 400px;
+				margin: 0 auto;
+				border: 1px solid skyblue;
+				color: #292929;
+				border-radius: 20px;
+			}
+			
+			fieldset {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
+			
+			legend {
+				font-size: 24px;
+				font-weight: bold;
+				margin-bottom: 20px;
+			}
+			
+			label {
+				display: block;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			
+			input[type="text"],
+			input[type="password"],
+			input[type="email"],
+			textarea,
+			select {
+				width: 100%;
+				padding: 10px;
+				border-radius: 4px;
+				box-sizing: border-box;
+				margin-bottom: 15px;
+				font-size: 16px;
+			}
+			
+			select {
+				height: 40px;
+			}
+			
+			
+		</style>
+
+
+	</head>
+
+
+	<body>
+	
+	<h1>Information File:</h1>
+	
+		<form onsubmit="return mainfunction();" id="login">
+			<fieldset form="login">
+				<legend>Your Log-in Credentials</legend>
+					<label for="Name">Your Name:</label><br/>
+					<input type="text" id="Name" name="Name" onfocus="Onefunction()" onblur="Twofunction()" oninput="Threefunction()" required><br/>
+					
+					<br/><label for="userName">Your Username:</label><br/>
+					<input type="text" id="userName" name="userName" onfocus="function1()" onblur="function2()" oninput="function3()" required><br/>
+					
+					<br/><label for="gender">Your Gender:</label><br/>
+					<select name="yourGender" id="gender" onfocus="isafunction()" onblur="duwafunction()" oninput="tatlofunction()" required>
+					<option value="">Select</option>
+					<option value="female">Female</option>
+					<option value="male">Male</option>
+					<option value="private">Prefer not to say</option>
+					</select><br/>
+					
+					<br/><label for="password">Your Password:</label><br/>
+					<input type="password" id="pWord" name="password" onfocus="Ifunction()" onblur="IIfunction()" oninput="IIIfunction()" required><br/>
+					
+					<br/><label for="mail">Your Email:</label><br/>
+					<input type="email" id="mail" name="mail" onfocus="functionI()" onblur="functionII()" oninput="functionIII()" required><br/>
+					
+					<br/><label for="address">Your Address:</label><br/>
+					<textarea id="address" name="address" rows="2" cols="30" onfocus="afunction()" onblur="bfunction()" oninput="cfunction()" required></textarea><br/>
+					
+					<br/><label for="comments">Any Comments?: </label><br/>
+					<textarea id="tArea" name="comments" rows="5" cols="55" onfocus="dfunction()" onblur="efunction()" oninput="ffunction()" required></textarea><br/>
+					
+					<br/><input type="submit" value ="Submit form">
+					<input type="reset" onclick="location.reload()" value="Clear"><br/>
+			</fieldset>
+		</form>
+		<div id="demo"></div>
+		<script>
+			function Onefunction () {
+				document.getElementById("Name").style.borderColor = "red";
+			}
+			
+			function Twofunction() {
+				var x = document.getElementById("Name");
+				if (x.value == ""){
+					alert("Please enter your name :)")
+					
+				}		
+			}
+			
+			function Threefunction() {
+				document.getElementById("Name").style.borderColor = "skyblue";
+			
+				
+				}
+				
+				function function1 () {
+				document.getElementById("userName").style.borderColor = "red";
+			}
+			
+			function function2() {
+				var y = document.getElementById("userName");
+				if (y.value == ""){
+					alert("Please enter your username :)")
+					
+				}		
+			}
+			
+			function function3() {
+				document.getElementById("userName").style.borderColor = "skyblue";
+				
+				
+				}
+				function isafunction() {
+				document.getElementById("gender").style.borderColor = "red";
+			}
+			
+			function duwafunction() {
+				var z = document.getElementById("gender");
+				if (z.value =="Select"){
+					alert("Please choose an option")
+					
+				}		
+			}
+			
+			function tatlofunction() {
+				document.getElementById("gender").style.borderColor = "skyblue";
+				
+				
+				}
+				function Ifunction() {
+				document.getElementById("pWord").style.borderColor = "red";
+			}
+			
+			function IIfunction() {
+				var a = document.getElementById("pWord");
+				if (a.value == ""){
+					alert("Please input your password")
+					
+				}		
+			}
+			
+			function IIIfunction() {
+				document.getElementById("pWord").style.borderColor = "skyblue";
+				
+				
+				}
+			function functionI() {
+				document.getElementById("mail").style.borderColor = "red";
+			}
+			
+			function functionII() {
+				var b = document.getElementById("mail");
+				if (b.value == ""){
+					alert("Please input your email")
+					
+				}		
+			}
+			
+			function functionIII() {
+				document.getElementById("mail").style.borderColor = "skyblue";
+		
+				
+				}
+				function afunction() {
+				document.getElementById("address").style.borderColor = "red";
+			}
+			
+			function bfunction() {
+				var c = document.getElementById("address");
+				if (c.value == ""){
+					alert("Please input your address")
+					
+				}		
+			}
+			
+			function cfunction() {
+				document.getElementById("address").style.borderColor = "skyblue";
+				
+				}
+				function dfunction() {
+				document.getElementById("tArea").style.borderColor = "red";
+			}
+			
+			function efunction() {
+				var d = document.getElementById("tArea");
+				if (d.value == ""){
+					alert("Please give a comment for improvement^^")
+					
+				}		
+			}
+			
+			function ffunction() {
+				document.getElementById("tArea").style.borderColor = "skyblue";
+				
+				
+				}
+				
+			function mainfunction(){
+			
+				var x = document.getElementById("Name").value;
+				var y = document.getElementById("userName").value;
+				var z = document.getElementById("gender").value;
+				var a = document.getElementById("pWord").value;
+				var b = document.getElementById("mail").value;
+				var c = document.getElementById("address").value;
+				var d = document.getElementById("tArea").value;
+				var output = document.getElementById("demo").innerHTML = "<center><h1>Hey Here's your Data :)</h1></center><h2>Log-in Information:</h2>" +
+				"<p><strong>Your Name:</strong> " + x + "</p>" +
+				"<p><strong>Your Username:</strong> " + y + "</p>" +
+				"<p><strong>Your Gender:</strong> " + z + "</p>" +
+				"<p><strong>Your Password:</strong> " + a + "</p>" +
+				"<p><strong>Your Email:</strong> " + b + "</p>" +
+				"<p><strong>Your Address:</strong> " + c + "</p>" +
+				"<p><strong>Comments:</strong> " + d + "</p>" +
+				"<style>#demo {max-width: 600px;margin: 30px auto;border: 1px solid skyblue;padding: 20px;border-radius: 10px;background-color: white;box-shadow: 5px 10px #00aeef;color: #292929;}#output h2 {font-size: 24px;margin-bottom: 10px;}#demo p {font-size: 18px;margin-bottom: 5px;}</style>"
+				
+				return false;
+			
+
+
+
+				}
+			
+				
+		
+		
+		</script>
+		
+		
+		
+	</body>
+	
+</html>
